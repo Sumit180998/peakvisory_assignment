@@ -6,7 +6,7 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 export default function UploadFiles() {
   const [tabIndex, setTabIndex] = useState(1);
   const [selectedClient, setSelectedClient] = useState("");
-  const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null || 5);
 
   const handleTabChange = (_, newIndex) => setTabIndex(newIndex);
   const handleCopy = (text) => navigator.clipboard.writeText(text);
@@ -32,10 +32,13 @@ export default function UploadFiles() {
       setSelectedFile(file);
     }
   };
+  const AddReceipt=()=>{
+    console.log(selectedFile)
+  }
 
   return (
     <Paper sx={{ p: 3, width: 500, mx: "auto", mt: 5, borderRadius: 3 }}>
-      <Tabs value={tabIndex} onChange={handleTabChange} variant="fullWidth">
+      <Tabs value={tabIndex} onChange={handleTabChange} variant="fullWidth" >
         <Tab label="EasyUpload" />
         <Tab label="Bills" />
         <Tab label="Receipts" />
@@ -89,7 +92,7 @@ export default function UploadFiles() {
           </Typography>
         )}
 
-        <Button fullWidth variant="contained" color="primary" sx={{ mt: 2 }}>
+        <Button fullWidth variant="contained" color="primary" sx={{ mt: 2 }} onClick={()=>AddReceipt()}>
           Add Receipt
         </Button>
 

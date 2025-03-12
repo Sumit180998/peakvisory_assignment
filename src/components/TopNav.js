@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar, Toolbar, Box, Button, Select, MenuItem, FormControl, IconButton, Badge, Typography } from "@mui/material";
-import { Search, Notifications, Settings, Person } from "@mui/icons-material";
+import { Search, Notifications, Settings, Person} from "@mui/icons-material";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 export default function TopBar() {
@@ -17,7 +17,7 @@ export default function TopBar() {
 
      
           <FormControl sx={{ minWidth: 100 }} size="small">
-            <Select defaultValue="Google" displayEmpty sx={{ background: "white", borderRadius: 1, fontSize: "11px" }}>
+            <Select defaultValue="Google" display sx={{ background: "white", borderRadius: 1, fontSize: "11px" }}>
               <MenuItem value="Google">Google</MenuItem>
               <MenuItem value="Bing">Bing</MenuItem>
               <MenuItem value="Yahoo">Yahoo</MenuItem>

@@ -99,7 +99,7 @@ export default function PaymentPanel() {
 
   <Box mt={1}>
     <Typography variant="body2" fontWeight="bold" color="gray" sx={{ fontSize: "11px" }}>Type Comment</Typography>
-    <TextField fullWidth placeholder="Start Typing" multiline rows={4} variant="standard" sx={{ fontSize: "10px" }}/>
+    <TextField fullWidth placeholder="Start Typing..." multiline rows={4} variant="standard" sx={{ fontSize: "10px" }}/>
 
   </Box>
 

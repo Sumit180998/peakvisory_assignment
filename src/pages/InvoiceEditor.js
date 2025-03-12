@@ -37,7 +37,7 @@ const InvoiceEditor = () => {
             "&:hover": { background: "#4C2EBF" }
           }}
         >
-          Add to Expenses
+          Add to Expenses Report
         </Button>
       </Box>
 
@@ -53,11 +53,34 @@ const InvoiceEditor = () => {
 >
 
         <Paper sx={{ width: 300, padding: 1, borderRadius: 2, mr: 2 }}>
-          <Tabs value={tabIndex} onChange={(_, newValue) => setTabIndex(newValue)} variant="fullWidth">
-            <Tab label="Documents" />
-            <Tab label="Bills" />
-            <Tab label="Receipts" />
-          </Tabs>
+        <Tabs
+  value={tabIndex}
+  onChange={(_, newValue) => setTabIndex(newValue)}
+  variant="fullWidth"
+  sx={{
+    "& .MuiTab-root": {
+      color: "#8181A5", // Unselected text color
+      backgroundColor: "transparent",
+      padding: "10px 20px",
+      borderRadius: "8px",
+      fontWeight: "bold",
+      textTransform: "none " ,
+      border: "none", // No border for unselected tabs
+    },
+    "& .Mui-selected": {
+      color: "#1C1D21", // Selected text color
+      border: "1px solid #ECECF2", // Border only for selected tab
+      borderRadius: "8px",
+    },
+  }}
+>
+  <Tab label="Documents" />
+  <Tab label="Bills" />
+  <Tab label="Receipts" />
+</Tabs>
+
+
+
 
           <List sx={{ mt: 1 }}>
             {bills.map((bill) => (

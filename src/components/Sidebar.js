@@ -44,9 +44,9 @@ export default function Sidebar() {
               justifyContent: "center",
               height: 60, 
               color: "#fff",
-              backgroundColor: selectedIndex === index ? '#FFFFFF33 !important' : "transparent", 
+              backgroundColor: selectedIndex === index ? '#8181A5 !important' : "transparent", 
               position: "relative",
-              "&:hover": { backgroundColor: "#FFFFFF33" }, 
+              "&:hover": { backgroundColor: "#8181A5" }, 
             }}
           >
           
@@ -57,7 +57,7 @@ export default function Sidebar() {
                   left: 0,
                   width: 4,
                   height: 60, 
-                  backgroundColor: "#8181A5",
+                  backgroundColor: "#ffffff",
                 }}
               />
             )}
@@ -80,7 +80,7 @@ export default function Sidebar() {
             justifyContent: "center",
             height: 50, 
             color: "#fff",
-            "&:hover": { backgroundColor: "#FFFFFF33" },
+            "&:hover": { backgroundColor: "#8181A5" },
           }}
         >
           <img src={Question} alt="Help Icon" width={18} height={18} />
